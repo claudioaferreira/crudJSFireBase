@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+     <!-- jQuery library -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <!-- Popper JS -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+     <!-- Latest compiled JavaScript -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+     <title>Registro Imei</title>
+     <nav class="navbar navbar-light bg-light">
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <span class="material-icons ">
+                    input
+                    </span>
+                REGISTRO IMEI
+              </a>
+            </div>
+          </nav>
+      </nav>
+</head>
+<body>
+    <br>
+            <div class="col-sm-1">
+                <!-- // para crear un espacio -->
+            </div>
+            <div class="col-sm-4">
+                <!-- //formulario para anadir/modificidar Convalidaciones -->
+                <div class="p-3 border bg-light">
+                <form id="form-convalidaciones">
+                    <fieldset>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <label for="imei" class="form-label"><h4>Introduce el IMEI:</h4></label>
+                                    <input type="number" class="form-control" id="imei" name="imei" aria-describedby="imei">
+                                  </div>
+                            </div>
+                          </div>
+                   
+                </fieldset>
+
+                <fieldset>
+                    <div class="card mt-2" >
+                        <label for="cargador" class="badge rounded-pill bg-info  text-dark mt-2 ms-2" style="width: 7rem;">Cargador</label>
+                        <input type="text" class="form-control" name="cargador" value="" id="cargador">
+                    </div> 
+                </fieldset>
+
+                    <div class="card mt-2" >
+                        <label for="cableusb" class="badge rounded-pill bg-info  text-dark mt-2 ms-2" style="width: 7rem;">Cable USB</label>
+                        <input type="text"  class="form-control" name="cableusb" value="" id="cableusb">
+                    </div>
+                    <div class="card mt-2" >
+                        <label for="caja" class="badge rounded-pill bg-info  text-dark mt-2 ms-2" style="width: 7rem;">Caja</label>
+                        <input type="text"  class="form-control" name="caja" value="" id="caja">
+                    </div>
+                    
+                    <div class="card mt-2">
+                        <div class="card-body">
+                            <div class="col-md-auto">
+                              <input type="submit" class="btn btn-primary" name="" id="" value="Añadir">
+                                <!-- <button type="button" onclick="recogerDatos()" class="btn btn-primary" id="guardar">Agregar</button>
+                                <button type="button" id="modificar" class="btn btn-danger ms-3">Modificar</button>  -->
+                                <!-- <button type="button" id="crear" class="btn btn-success">Crear Tabla</button>       
+                                <button type="button" id="listar" class="btn btn-success">Mostrar/Actualizar</button>
+                                <button type="button" id="borrarTodo" class="btn btn-danger">Eliminar todo</button> -->
+                              </div>
+                        </div>
+                      </div>
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container px-10">
+        <div class="row g-1 mt-3 ms-2">
+            <div class="col-md-15">
+                <div class="p-3 border bg-light"><h5>EQUIPOS INGRESADOS</h5>
+                <!-- //Tabla con las Convalidaciones -->
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+
+                        </tr>
+                        <tr>
+                            <th style="width: 58px; text-align: left;">IMEI</th>
+                            <th style="width: 58px; text-align: left;">Cargador</th>
+                            <th style="width: 58px; text-align: left;">Cable USB</th>
+                            <th style="width: 58px; text-align: left;">Caja</th>
+                            <th style="width: 58px; text-align: left;"></th>
+                            <th style="width: 58px; text-align: left;"></th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tbody-tabla-convalidaciones">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="container">
+           
+        <div id="conteo" class="card" style="width: 8rem;">
+            <div class="card-body">
+                <h5 class="card-title">Cantidad</h5>
+                <p class="card-text btn btn-danger" id="conteos"></p>
+              </div>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script> 
+    <script src="js/convalidaciones.js"></script>
+</body>
+</html>
